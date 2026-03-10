@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO 10 USO DE APREDCHILD</title>
+</head>
+<body>
+    <div id="contenedor1">Contenedor inicial</div>
+    <button id="boton">Agregar elemento</button>
+    <script>
+        const nuevo_elemento=document.createElement(`div`);// para crear elemento 
+        nuevo_elemento.textContent=`elemento creado con DOM`;// para agregar texto al elemento creado
+        const contenedor=document.getElementById(`contenedor1`);// para obtener el elemento contenedorc
+        contenedor.appendChild(nuevo_elemento);// para agregar el nuevo elemento al contenedor
+        console.log(contenedor1)
+
+    </script>
+</body>
+</html>
