@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO 14 STPOPROPAGATION</title>
+</head>
+<body>
+    <div id="padre">elemento padre</div>
+    <div id="hijo">elemento hijo
+    </div>
+    <script>
+        const elementohijo=document.getElementById(`hijo`);
+        elementohijo.addEventListener(`click`,(event)=>{
+            console.log(`hijo`);
+            alert(`evento hijo`);
+        });
+        const elementopadre=document.getElementById(`padre`);
+        elementopadre.addEventListener(`click`,(event)=>{
+            console.log(`padre`);
+            alert(`evento padre`);
+        });
+    </script>
+</body>
