@@ -5,52 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRUD Local Server</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Dosis&family=Open+Sans&family=Parisienne&display=swap" rel="stylesheet"
-    />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&family=Open+Sans&family=Parisienne&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .form-box {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f4f4f4;
+            border-radius: 12px;
+        }
+
+        .form-box h3 {
+            margin-bottom: 12px;
+        }
+
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .form-row input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            flex: 1;
+            min-width: 180px;
+        }
+    </style>
 </head>
 <body>
     <main>
-    <div class="container">
-        <header>
-            <h1>CRUD Local Server</h1>
-        </header>
+        <div class="container">
+            <header>
+                <h1>CRUD Local Server</h1>
+            </header>
 
-        <div class="controls">
-            <button class="btn btn-get" onclick="getData()">Obtener Posts (GET)</button>
-            <button class="btn btn-post" onclick="postData()">Crear Post (POST)</button>
-            <button class="btn btn-put" onclick="putData()">Actualizar Post 1 (PUT)</button>
-            <button class="btn btn-delete" onclick="deleteData()">Eliminar Post 1 (DELETE)</button>
+            <div class="controls">
+                <button class="btn btn-get" onclick="getData()">Obtener Posts (GET)</button>
+                <button class="btn btn-post" onclick="postData()">Crear Post (POST)</button>
+                <button class="btn btn-put" onclick="putData()">Actualizar Post por ID (PUT)</button>
+                <button class="btn btn-delete" onclick="deleteData()">Eliminar Post por ID (DELETE)</button>
+            </div>
+
+            <div class="form-box">
+                <h3>Actualizar o Eliminar por ID</h3>
+
+                <div class="form-row">
+                    <input type="text" id="postId" placeholder="Ingrese el ID del post (ej: 1 o 2)">
+                </div>
+
+                <div class="form-row">
+                    <input type="text" id="tituloUpdate" placeholder="Nuevo título">
+                    <input type="text" id="descripcionUpdate" placeholder="Nueva descripción">
+                </div>
+            </div>
+
+            <div class="results">
+                <h3>Resultados:</h3>
+                <div id="status"></div>
+                <pre id="result">RESULTADO..</pre>
+            </div>
         </div>
 
-        <div class="results">
-            <h3>Resultados:</h3>
-            <div id="status"></div>
-            <pre id="result">RESULTADO..</pre>
-        </div>
-    </div>
+        <script src="js/get.js"></script>
+        <script src="js/post.js"></script>
+        <script src="js/put.js"></script>
+        <script src="js/delete.js"></script>
 
-    <script src="js/get.js"></script>
-    <script src="js/post.js"></script>
-    <script src="js/put.js"></script>
-    <script src="js/delete.js"></script>
-    
-    <script>
-        function showResult(data, isError = false) {
-            const statusEl = document.getElementById('status');
-            const resultEl = document.getElementById('result');
-            
-            if (isError) {
-                statusEl.innerHTML = '<div class="status status-error">Error en la operación</div>';
-                resultEl.textContent = typeof data === 'string' ? data : JSON.stringify(data, null, 2);
-            } else {
-                statusEl.innerHTML = '<div class="status status-success">Operación exitosa</div>';
-                resultEl.textContent = JSON.stringify(data, null, 2);
+        <script>
+            function showResult(data, isError = false) {
+                const statusEl = document.getElementById('status');
+                const resultEl = document.getElementById('result');
+
+                if (isError) {
+                    statusEl.innerHTML = '<div class="status status-error">Error en la operación</div>';
+                    resultEl.textContent = typeof data === 'string' ? data : JSON.stringify(data, null, 2);
+                } else {
+                    statusEl.innerHTML = '<div class="status status-success">Operación exitosa</div>';
+                    resultEl.textContent = JSON.stringify(data, null, 2);
+                }
             }
-        }
-    </script>
+        </script>
     </main>
 </body>
 </html>
