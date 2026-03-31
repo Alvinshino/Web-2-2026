@@ -12,6 +12,5 @@
       "fecha": "2026-03-24T13:14:35.018Z",
       "id": "F3qJCyvCrxo"
     }
-  ],
-  "$schema": "./node_modules/json-server/schema.json"
+  ]
 }
