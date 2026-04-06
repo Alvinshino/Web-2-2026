@@ -3,7 +3,7 @@ const cards = (()=>{
            const taskCards = document.getElementById('taskCards');
            const update =()=>{
               const tasks = tabla.getTask();
-              taskCards.innerHTML = '';//LIMPIANDO LAS CARDDS al momento de refrescar
+              taskCards.innerHTML = '';
 
               tasks.forEach(task => {
                     const card = document.createElement('div');
