@@ -1,0 +1,16 @@
+{
+  "tasks": [
+    {
+      "task": "programacion 1",
+      "description": "datos y codigos",
+      "date": "2005-06-01",
+      "priority": "muy alta",
+      "extra1": "lugar",
+      "extra2": "hogar",
+      "extra3": "datos",
+      "completed": true,
+      "id": "JNuS4f2VGGo"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
