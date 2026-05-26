@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Hogwarts</title>
+    <!-- Enlace al CSS - Asegúrate que el archivo se llame style.css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="scroll">
+            <img src="https://static.wikia.nocookie.net/esharrypotter/images/a/ae/Hogwartscrest.png/revision/latest?cb=20150516174751" alt="Hogwarts" class="logo">
+            <h1>Solicitud de Ingreso</h1>
+            
+            <form id="hogwartsForm">
+                <div class="input-group">
+                    <label for="nombre">Nombre del Mago/Bruja:</label>
+                    <input type="text" id="nombre" required placeholder="Ej. Harry Potter">
+                </div>
+
+                <div class="input-group">
+                    <label for="casa">Casa de Preferencia:</label>
+                    <select id="casa">
+                        <option value="Gryffindor">Gryffindor</option>
+                        <option value="Slytherin">Slytherin</option>
+                        <option value="Ravenclaw">Ravenclaw</option>
+                        <option value="Hufflepuff">Hufflepuff</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="mascota">Mascota de Compañía:</label>
+                    <input type="text" id="mascota" placeholder="Lechuza, gato, sapo...">
+                </div>
+
+                <button type="submit" id="btn-enviar">Enviar con Lechuza</button>
+            </form>
+
+            <div id="mensaje-magico" class="hidden"></div>
+        </div>
+    </div>
+
+    <!-- Enlace al JS - Asegúrate que el archivo se llame script.js -->
+    <script src="script.js"></script>
+</body>
+</html>

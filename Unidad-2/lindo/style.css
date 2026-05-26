@@ -1,0 +1,109 @@
+/* Fondo oscuro tipo mazmorra */
+body {
+    background-color: #121212;
+    background-image: radial-gradient(circle, #2c1e14 0%, #000000 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Palatino', 'Georgia', serif;
+    color: #4a2c2a;
+}
+
+/* El pergamino animado */
+.scroll {
+    background: #f4e4bc;
+    background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.8), inset 0 0 60px #d2b48c;
+    width: 380px;
+    text-align: center;
+    border: 15px solid transparent;
+    border-image: url('https://raw.githubusercontent.com/L-S-R-0/Harry-Potter-Form/main/border.png') 30 round;
+    position: relative;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(-1deg); }
+    50% { transform: translateY(-15px) rotate(1deg); }
+}
+
+.logo {
+    width: 100px;
+    filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.5));
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin: 10px 0 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #8b4513;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-bottom: 2px solid #8b4513;
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+input:focus {
+    background: rgba(139, 69, 19, 0.1);
+    outline: none;
+    border-bottom-color: #741b1b;
+}
+
+button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 12px;
+    background: #741b1b;
+    color: #eeba30;
+    border: 2px solid #eeba30;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #eeba30;
+    color: #741b1b;
+    box-shadow: 0 0 20px #eeba30;
+}
+
+.hidden { display: none; }
+
+.success-msg {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
